@@ -18,6 +18,8 @@ void insert_sort(int arr[], int s)
             j--;
             count++;
         }
+        if (count == 0) //if the while loop doesn't execute at all then, this means that only one comparison was done
+            count=1;
         arr[j + 1] = temp;
         cout << "\nThe no. of comparisons for " << i << " iterations: " << count;
     }
@@ -34,10 +36,9 @@ int main()
         cin >> a[i];
     insert_sort(a, n);
     cout << "\n\nSorted Data Elements:-\n";
-    cout << "--------------------------\n";
+    cout << "----------------------\n";
     for (i = 0; i < n; i++)
         cout << a[i] << endl;
 
     return 0;
 }
-
