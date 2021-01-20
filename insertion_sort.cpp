@@ -6,7 +6,7 @@ using namespace std;
 
 void insert_sort(int arr[], int s)
 {
-    int i, j, temp, count=0;
+    int i, j, temp, count=0, t_count=0;
     for (i = 1; i < s; i++, count=0)
     {
         temp = arr[i];
@@ -21,8 +21,10 @@ void insert_sort(int arr[], int s)
         if (count == 0) //if the while loop doesn't execute at all then, this means that only one comparison was done
             count=1;
         arr[j + 1] = temp;
+        t_count += count;
         cout << "\nThe no. of comparisons for " << i << " iterations: " << count;
     }
+    cout << "\nTotal no. of comparisons done throughout the process: " << t_count;
 }
 
 
@@ -42,3 +44,4 @@ int main()
 
     return 0;
 }
+
