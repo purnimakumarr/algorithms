@@ -1,8 +1,6 @@
 // HeapSort.cpp : Objective : Implement heap sort and print number of comparisons.
-//
 
 #include <iostream>
-#include<stdio.h>
 
 using namespace std;
 
@@ -73,7 +71,7 @@ int main()
     cin >> s; //length of array
     cout << "Enter an array: ";
     for (int i = 1; i <= s; i++)
-        arr[i] = rand();
+        cin>>arr[i];
 
     int count=heap_sort(s);
 
